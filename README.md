@@ -1,4 +1,6 @@
-# sakai-vue
+# sakai-vue-template
+
+Current version: sakai-vue [3.8.0](https://github.com/primefaces/sakai-vue/releases)
 
 This template should help get you started developing with Vue 3 in Vite.
 
