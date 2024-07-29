@@ -115,7 +115,7 @@ watch(
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex flex-wrap">
     <div class="w-1/1 md:w-1/2 lg:w-1/4 p-2">
       <Card>
         <template #subtitle>Orders</template>
@@ -154,7 +154,7 @@ watch(
     </div>
   </div>
 
-  <div class="flex">
+  <div class="flex flex-wrap">
     <div class="w-1/1 md:w-1/2 p-2">
       <Card>
         <template #title>Recent Sales</template>
@@ -163,8 +163,8 @@ watch(
             <Column style="width: 15%">
               <template #header> Image </template>
               <template #body="slotProps">
-                <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`" :alt="slotProps.data.image"
-                  width="50" class="shadow-2" />
+                <img :src="`https://primefaces.org/cdn/primevue/images/product/${slotProps.data.image}`"
+                  :alt="slotProps.data.image" width="50" class="shadow-2" />
               </template>
             </Column>
             <Column field="name" header="Name" :sortable="true" style="width: 35%"></Column>
@@ -189,22 +189,23 @@ watch(
         <template #content>
           <DataView :value="bestProducts">
             <template #list="slotProps">
-              <div class="grid grid-nogutter">
-                <div v-for="(item, index) in slotProps.items" :key="index">
-                  <div class="flex flex-column sm:flex-row sm:align-items-center p-3"
-                    :class="{ 'border-top-1 surface-border': index !== 0 }">
-                    <div class="md:w-10rem relative">
-                      <img :src="`https://primefaces.org/cdn/primevue/images/product/${item.image}`" :alt="item.name"
-                  width="70" class="shadow-2 block xl:block border-round mx-auto" />
-                    </div>
-                    <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
-                      <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
-                        <div>
-                          <div class="font-medium mt-2">{{ item.name }}</div>
-                          <Rating v-model="item.rating" :cancel="false" readonly />
-                        </div>
+              <div v-for="(item, index) in slotProps.items" :key="index">
+                <div class="flex align-items-center p-3"
+                  :class="{ 'border-top-1 surface-border': index !== 0 }">
+                  <div class="w-10rem relative">
+                    <img :src="`https://primefaces.org/cdn/primevue/images/product/${item.image}`" :alt="item.name"
+                      width="70" class="shadow-2 block xl:block border-round mx-auto" />
+                  </div>
+                  <div class="flex flex-column justify-content-between flex-1 gap-4">
+                    <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+                      <div>
+                        <div class="font-medium mt-2">{{ item.name }}</div>
+                        <Rating v-model="item.rating" :cancel="false" readonly />
                       </div>
                     </div>
+                  </div>
+                  <div class="flex flex-column align-items-end gap-5">
+                    <span class="text-xl font-semibold text-900">${{ item.price }}</span>
                   </div>
                 </div>
               </div>
@@ -216,7 +217,7 @@ watch(
 
   </div>
 
-  <div class="flex">
+  <div class="flex flex-wrap">
     <div class="w-1/1 p-2">
       <Card>
         <template #title>Sales Overview</template>
@@ -233,7 +234,8 @@ watch(
         </template>
       </Card>
     </div>
-  </div></template>
+  </div>
+</template>
 
 <style scoped></style>
 
