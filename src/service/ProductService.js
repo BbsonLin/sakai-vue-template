@@ -1,4 +1,4 @@
-const contextPath = import.meta.env.BASE_URL
+const contextPath = import.meta.env.BASE_URL;
 
 export default class ProductService {
     getProductsSmall() {
@@ -7,14 +7,8 @@ export default class ProductService {
             .then((d) => d.data)
     }
 
-    getProducts() {
-        return fetch(contextPath + 'demo/data/products.json')
-            .then((res) => res.json())
-            .then((d) => d.data)
-    }
-
-    getProductsWithOrdersSmall() {
-        return fetch(contextPath + 'demo/data/products-orders-small.json')
+    getBestProducts() {
+        return fetch(contextPath + 'demo/data/best-products.json')
             .then((res) => res.json())
             .then((d) => d.data)
     }

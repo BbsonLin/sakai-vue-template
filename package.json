@@ -1,6 +1,7 @@
 {
     "name": "your-project",
     "version": "0.0.0",
+    "type": "module",
     "scripts": {
         "dev": "vite",
         "build": "vite build",
@@ -26,6 +27,7 @@
         "prettier": "^2.7.1",
         "sass": "^1.55.0",
         "typescript": "^5.5.4",
+        "unocss": "^0.60.3",
         "unplugin-vue-components": "^0.27.3",
         "vite": "^4.2.1",
         "vue-tsc": "^2.0.29"
