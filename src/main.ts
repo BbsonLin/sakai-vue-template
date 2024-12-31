@@ -1,5 +1,4 @@
 import { createApp } from 'vue'
-import 'virtual:uno.css'
 import App from './App.vue'
 import router from './router'
 
@@ -8,7 +7,8 @@ import PrimeVue from 'primevue/config'
 import ToastService from 'primevue/toastservice'
 import StyleClass from 'primevue/styleclass'
 
-import '@/assets/styles.scss'
+import '@/assets/styles.scss';
+import '@/assets/tailwind.css';
 
 const app = createApp(App)
 
