@@ -14,12 +14,9 @@ declare module 'vue' {
     Column: typeof import('primevue/column')['default']
     DataTable: typeof import('primevue/datatable')['default']
     DataView: typeof import('primevue/dataview')['default']
-    InputSwitch: typeof import('primevue/inputswitch')['default']
-    Menu: typeof import('primevue/menu')['default']
     Rating: typeof import('primevue/rating')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SelectButton: typeof import('primevue/selectbutton')['default']
-    Sidebar: typeof import('primevue/sidebar')['default']
   }
 }
